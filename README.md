@@ -1,1 +1,1 @@
-# minedetection
+# mine_detector
