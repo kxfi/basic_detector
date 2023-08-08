@@ -1,1 +1,4 @@
-The given code is an implementation of a basic object detection system using the YOLOv5 model. It captures video frames from a camera or a video file, processes them using the YOLOv5 model for object detection, and displays the processed frames with bounding boxes and labels around detected objects. The code provides a simple user interface to specify the model path, video source (camera or video file), and other configurations
+Military_Detection
+
+Detects people, tanks, mines, IEDs
+
