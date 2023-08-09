@@ -24,7 +24,6 @@ import torch
 from threading import Thread
 import datetime
 
-#TESTING
 
 #os.chdir("C:\\Users\\Ken\\Desktop\\baby_Talos\\TALOS_APP")
 try:
