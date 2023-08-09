@@ -1,4 +1,3 @@
-Military_Detection
+military_detector
 
-Detects people, tanks, mines, IEDs
 
