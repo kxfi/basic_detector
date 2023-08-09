@@ -59,7 +59,7 @@ class BasicDetector(Vision_Manager):
         """ Make a model object from the trained algorithm """
         torch.hub._validate_not_a_forked_repo=lambda a,b,c: True
         # Custom model
-        model = torch.hub.load("ultralytics/yolov5","custom",path = self.model_path,force_reload=True) # you will need this uncommented line if you get errors
+        model = torch.hub.load("ultralytics/yolov5","custom",path = self.model_path) #force_reload=True) # you will need this uncommented line if you get errors
         # Yolov5 model
         #model = torch.hub.load('ultralytics/yolov5', 'yolov5s')  # or yolov5n - yolov5x6, custom
         model.conf = 0.4
@@ -113,7 +113,8 @@ class BasicDetector(Vision_Manager):
                 w = x_max - x
                 h = y_max - y
 
-                # Give the detectections names 
+                # Give the detection names 
+                '''
                 id = int(id)
 
                 if id == 0:
@@ -132,7 +133,64 @@ class BasicDetector(Vision_Manager):
                     name = "object"
                 else:
                     name = "mil vehicle"
-
+                '''
+                id = int(id)
+                
+                if id == 0:
+                    name = "person"
+                elif id == 1:
+                    name = "car"
+                elif id == 2:
+                    name = "helicopter"
+                elif id == 3:
+                    name = "BTR"
+                elif id == 4:
+                    name = "T72"
+                elif id == 5:
+                    name = "BMP2"
+                elif id == 6:
+                    name = "ZSU234"
+                elif id == 7:
+                    name = "SA-13"
+                elif id == 8:
+                    name = "2S1"
+                elif id == 9:
+                    name = "SA-10"
+                elif id == 10:
+                    name = "M113A2"
+                elif id == 11:
+                    name - "Long_Track"
+                elif id == 12:
+                    name = "HMMWV"
+                elif id == 13:
+                    name = "SA-6"
+                elif id == 14:
+                    name = "MTLB"
+                elif id == 15:
+                    name = "SA-9"
+                elif id == 16:
+                    name = "SA-8"
+                elif id == 17:
+                    name = "2S19"
+                elif id == 18:
+                    name = "ZPU1"
+                elif id == 19:
+                    name = "SA-22"
+                elif id == 20:
+                    name = "tank"
+                elif id == 21:
+                    name = "Abrams"
+                elif id == 22:
+                    name = "PTKM"
+                elif id == 23:
+                    name = "AT"
+                elif id == 24:
+                    name = "EFP"
+                elif id == 25:
+                    name = "Artillery"
+                elif id == 26:
+                    name = "AP"
+                
             
                 timestamp = datetime.datetime.now().timestamp()
 
@@ -269,7 +327,7 @@ if __name__ == "__main__":
         # Display the resulting frame
         cv2.imshow('frame',frame)
         
-        cv2.waitKey(1)
+        cv2.waitKey(10)
 
     detector.end()
     cv2.destroyAllWindows()
