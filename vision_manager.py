@@ -29,7 +29,7 @@ class Vision_Manager:
         self.RUN = True
 
         self.MODEL_READY=False
-        #!self.model_path = "/Users/jeremyacheampong/Developer/CounterMine/Jeremy_CODE/exp7/weights/minenet2.pt"
+        self.model_path = "/Users/jeremyacheampong/Developer/CounterMine/Jeremy_CODE/exp7/weights/minenet2.pt"
 
 
         # Models
