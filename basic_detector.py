@@ -36,7 +36,7 @@ class BasicDetector(Vision_Manager):
         super().__init__(self)
         self.config = config
         # PATH IS WHAT CHANGES! IT IS A .PT FILE
-        self.model_path = "/Users/jeremyacheampong/Developer/CounterMine/Jeremy_CODE/Models/minenet2.pt"# '/home/atr/Talos_spot/App/MODELS/groundnet_atr.pt'
+        self.model_path = "/Volumes/T7 Touch/Jeremy_MINES/Jeremy_CODE/Models/minenet2.pt"# '/home/atr/Talos_spot/App/MODELS/groundnet_atr.pt'
         self.detection_data = {"Front":[]}
 
     def start(self):
@@ -299,7 +299,7 @@ if __name__ == "__main__":
     # Create a video capture object to read videos
     cam_ip = 1 #"rtsp://admin:Superstarboi321!@192.168.0.175/1"
     # Replace url to test with video
-    cam = "/Users/jeremyacheampong/Developer/CounterMine/MINES/IR_mines/VIDS/top_video.mp4" 
+    cam = "/Volumes/T7 Touch/Jeremy_MINES/MINES/IR_mines/VIDS/top_video.mp4" 
     cap = cv2.VideoCapture(cam)
 
     config = 1
