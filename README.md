@@ -1,3 +1,3 @@
-military_detector
+mine and human detector
 
 
